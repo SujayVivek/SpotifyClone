@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Login.css'
+import { loginUrl } from './Spotify'
 
 const Login = () => {
   return (
@@ -8,7 +9,7 @@ const Login = () => {
         src="https://music-b26f.kxcdn.com/wp-content/uploads/2017/06/635963274692858859903160895_spotify-logo-horizontal-black.jpg"
         alt="Spotify logo"
       />
-      <a href="#">LOGIN WITH CLOTIFY</a>
+      <a href={loginUrl}>LOGIN WITH SpOTIFY</a>
     </div>
   )
 }
