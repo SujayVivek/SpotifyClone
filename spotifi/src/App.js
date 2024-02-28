@@ -17,7 +17,7 @@ const App = () => {
       setToken(_token);
       spotify.setAccessToken(_token);
     }   
-    console.log("token",token); 
+    console.log("token",_token); 
   },[])
   return (
     <>
