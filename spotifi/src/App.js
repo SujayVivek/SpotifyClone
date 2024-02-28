@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Login from './components/Login'
 import { getTokenFromURL } from './components/Spotify';
+import SpotifyWebApi from "spotify-web-api-js";
+
+const spotify= new SpotifyWebApi();
 
 const App = () => {
   const [token,setToken]= useState(0);
@@ -12,7 +15,9 @@ const App = () => {
 
     if(_token){
       setToken(_token);
-    }    
+      spotify.setAccessToken(_token);
+    }   
+    console.log("token",token); 
   },[])
   return (
     <>
